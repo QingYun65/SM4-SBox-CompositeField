@@ -5,3 +5,6 @@ AES 和 SM4 的表达都是基于多项式基，以 AES 的有限域为例，假
 这种做法是将GF(2<sup>8</sup>)直接看作GF(2)的8次扩域。我们也可以不这么看，将GF(2<sup>8</sup>)看成GF(2<sup>4</sup>)的2次扩域，GF(2<sup>4</sup>)可以进一步看作GF(2<sup>2</sup>)的2次扩域，再进一步GF(2<sup>2</sup>)可以看作GF(2)的2次扩域。而GF(2<sup>8</sup>)的求逆运算，可以通过数学表达式，转换为GF(2<sup>4</sup>)的求逆和一些乘、加操作。这些操作可以进一步向下转化。   
      
 从而实现对AES和SM4的bit直接进行逻辑运算，避免查表操作，同时结合AESNI指令集可以将SM4的S盒运算转化为AES的S盒运算。
+
+
+运行指导以及代码运行结果截图见WordDocument-OperationalGuidelines-and-ScreenshotsOfResults中创新实践提交文档.docx
